@@ -38,6 +38,64 @@ header img {
 	padding-right: 3.125%;
 	padding-bottom: 1em;
 }
+/***********Navagation Bar****************************/
+#nav_menu ul{
+	list-style-type: none ; /***remove bullets from all ul elements***/
+	position: relative; /****So the sibmenus can be postionsed***/
+	margin: 0;
+	padding: 0;
+}
+#nav_menu ul li {
+	float: left; /*********Display items*****/
+}
+#nav_menu ul li a{
+	display: block;
+	width: 192px;
+	text-align: center;
+	padding: 1em 0;
+	text-decoration: none;
+	background-color: #800000;
+	color: white;
+	font-weight: bold;
+}
+#nav_menu a.current{
+	color: yellow;
+}
+#nav_menu ul ul{
+	display: none; /*****Dont display submenous until hover over****/
+	position: absolute;
+	top: 100%; /*****postion submenous wuntil hover of li***/
+}
+#nav_menu ul ul li{
+	float: none; /***display subenous vertically***/
+}
+#nav_menu ul li a:hover{
+	background-color: #380000;
+	color: white;
+}
+#nav_menu ul li:hover > ul {
+ display: block; /***select ul child of li element***/
+ background-color: #800000;
+}
+#nav_menu > ul::after{
+	content: ""; /***add empty content to the end fo the first ul***/
+	display: both;/*****display that content as a block element**/
+	clear: block; /*******stop the flaoting of the li element***/
+}
+/* Displays navbar dropdown menu once user navigates mouse to from menu*/
+#nav_menu ul li:hover >ul{
+	display: block;
+}
+/* Hides navbar dropdown menu once user navigates mouse away from menu*/
+#nav_menu> ul::after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.current{
+	color: yellow;
+}
+/*******Nav is ended**************/
 /* the styles for the main section */
 main, section, aside {
 	clear: left;
@@ -46,6 +104,7 @@ main, section, aside {
 article {
 	padding-top: .5em;
 	padding-bottom: .5em;
+	
 	
 }
 
