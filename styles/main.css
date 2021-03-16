@@ -1,11 +1,13 @@
-* {
-	margin: 0;
-	padding: 0;
-}
 /* the styles for the elements */
 html{
 	background-color: white;
 }
+/* the rest selector*/
+*{
+	margin: 0%;
+	padding: 0%;
+}
+/* styles for the elements*/
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 100%;
@@ -38,74 +40,114 @@ header img {
 	padding-right: 3.125%;
 	padding-bottom: 1em;
 }
-/***********Navagation Bar****************************/
-#nav_menu ul{
-	list-style-type: none ; /***remove bullets from all ul elements***/
-	position: relative; /****So the sibmenus can be postionsed***/
-	margin: 0;
+header h2{
+	padding-top: 1.5px;
+	font-size: 170%;
+	color: #800000;
+}
+header h3{
+	font-size: 130%;
+	font-style: italic;
+	text-align: 30px;
+	padding-bottom: 2px;
+}
+
+/**************************************************************** N A V I G A T I O N   B A R ******************************************************************/
+
+#nav_menu ul {
+	list-style-type: none;
+	margin-left: auto;
 	padding: 0;
+	position: relative;
+	width: 100%;
 }
+
 #nav_menu ul li {
-	float: left; /*********Display items*****/
+	float: left;
+	width: 100%;
 }
-#nav_menu ul li a{
-	display: block;
-	width: 192px;
+
+#nav_menu ul li a {
 	text-align: center;
-	padding: 1em 0;
-	text-decoration: none;
-	background-color: #800000;
-	color: white;
-	font-weight: bold;
+    display: block;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: #800000;
+    color: white;
+    font-weight: bold;
 }
-#nav_menu a.current{
+
+#nav_menu ul li a.current {
 	color: yellow;
 }
-#nav_menu ul ul{
-	display: none; /*****Dont display submenous until hover over****/
-	position: absolute;
-	top: 100%; /*****postion submenous wuntil hover of li***/
+
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+	top: 100%;
 }
-#nav_menu ul ul li{
-	float: none; /***display subenous vertically***/
+#nav_menu ul li a:hover, #nav_menu ul li a:focus{
+	background-color: gray;
 }
-#nav_menu ul li a:hover{
-	background-color: #380000;
-	color: white;
+
+#nav_menu ul ul li {
+	float: none;
 }
+
+#nav_menu ul li a:hover {
+    background-color: #380000;
+    color: white;
+}
+
 #nav_menu ul li:hover > ul {
- display: block; /***select ul child of li element***/
- background-color: #800000;
+	display: block;
+	
 }
-#nav_menu > ul::after{
-	content: ""; /***add empty content to the end fo the first ul***/
-	display: both;/*****display that content as a block element**/
-	clear: block; /*******stop the flaoting of the li element***/
+
+#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
 }
+
 /* Displays navbar dropdown menu once user navigates mouse to from menu*/
-#nav_menu ul li:hover >ul{
+#nav_menu ul li:hover > ul {
 	display: block;
 }
+
 /* Hides navbar dropdown menu once user navigates mouse away from menu*/
-#nav_menu> ul::after{
-	content: "";
-	clear: both;
-	display: block;
+#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
 }
-.current{
+
+.current {
 	color: yellow;
 }
-/*******Nav is ended**************/
+
+/**************************************************************** END NAVIGATION BAR CSS ***********************************************************************/
+
 /* the styles for the main section */
 main, section, aside {
 	clear: left;
 }
+.columnone{
+	width: 60.937%;
+	float: right;
+	padding-right: 20px 2.0833;
+	padding-left:20px 2.0833;
+	padding-bottom: 20px;
+}
 
 article {
+	float: right;
 	padding-top: .5em;
 	padding-bottom: .5em;
-	
-	
+	border-top: 2px;
+	border-top-color: #800000;
+	border-bottom: 2px;
+	border-bottom-color: #800000;
 }
 
 article img {
@@ -121,7 +163,7 @@ article img {
 }
 
 article h2 {
-	padding-top: 0;
+	padding-top: 0em;
 }
 
 article h3 {
@@ -130,16 +172,15 @@ article h3 {
 }
 
 h1 {
-	font-size: 160%;
+	font-size: 150%;
 	padding-top: .5em;
 	padding-bottom: .25em;
 	margin-top: 0;
 	margin-bottom: 0;
-	color: #800000;
 }
 
-section {
-	width: 70%;
+section{
+	width: 55%;
 	max-width: 525px;
 	float: right;
 	padding-left: 9.08%;
@@ -148,7 +189,7 @@ section {
 }
 
 aside {
-	width: 22.395%;
+	width: 26.562%;
 	padding-left: 4.08%;
 	padding-bottom: 4.08%;
 }
@@ -162,8 +203,8 @@ aside img {
 
 
 h2 {
-	font-size: 150%;
-	color: black;
+	font-size: 130%;
+	color: #800000;
 	padding-top: .5em;
 	padding-bottom: .25em;
 }
@@ -182,6 +223,15 @@ blockquote {
 	padding-left: 2em;
 	font-style: italic;
 }
+h1{
+	font-size: 150%;
+	padding-top: .5em;
+	padding-bottom: .25em;
+	margin-top: 0%;
+	margin-bottom: 0%;
+
+}
+
 
 ul {
 	padding-bottom: .25em;
@@ -191,9 +241,15 @@ ul {
 li {
 	padding-bottom: .35em;
 }
+
+a:hover {
+	font-style: italic;
+}
+
 .shadow {
 	text-shadow: 2px 2px #800000;
 }
+
 
 /* the styles for the footer */
 
@@ -205,6 +261,67 @@ li {
 	padding-bottom: 1em;
 	clear: both;
 }
+.clearfix::after{
+	clear: both;
+	content: "";
+	display: table;
+}
+#mobilemenu{
+	display: none;
+  }
+  @media only screen and (max-width: 959px){
+	section h1{
+		font-size: 135%;
+	}
+	section h2{
+		font-size: 120%;
+	}
+	aside h2{
+		font-size: 120%;
+	}
+  }
+  @media only screen and (max-width: 767px){
+	  #nav_menu {
+		  display: none;
+	  }
+	  #mobliemenu{
+		  display: block;
+	  }
+	  .slicknav_menu{
+		  background-color: #800000 !important;
+	  }
+	  header img{
+		  float: none;
+		  max-width: 30%;
+	  }
+	  header{
+		  margin: 0;
+	  }
+	  .columnone{
+		  float: none;
+		  width: 95%;
+	  }
+	  aside{
+		  float: none;
+		  padding-right: 20px 2.0833;
+		  width: 95%;
+		  text-align: center;
+		  margin: auto;
+	  }
+		article{
+			text-align: center;
+			margin: auto;
+		}
+	@media only screen and (max-width: 479px) {
+		body{
+			font-size: 90%;
+		}
+	}
+
+  
+  }
+  
+
 
 
 
