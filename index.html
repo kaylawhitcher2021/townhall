@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +7,24 @@
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/main.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="styles/normalize.css">
+	<!--view port tag-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!--main css slicknav-->
+	<link rel="stylesheeet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/slicknav.css">
+	  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	  <script src="js/jquery.slicknav.min.js"></script>
+		  <script type="text/javascript">
+		  $(document).ready(function(){
+			  $('#nav_menu').slicknav({prependTo:"#mobilemenu"});
+		  });
+		  </script>
+  
 </head>
 
 <body>
@@ -17,6 +34,7 @@
 		<h3>Celebrating our <span class="shadow">75<sup>th</sup></span> Year</h3>
 	</header>
 	<nav id="nav_menu">
+	<nav id="mobile_menu"></nav>
 		<ul>
 			<li><a href="index.html" class="current">Home</a></li>
 
